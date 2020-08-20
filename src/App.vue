@@ -1,28 +1,65 @@
-<template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
-  </div>
+<template lang="pug">
+  #app.d-flex.flex-column.vh-100
+    main.flex-shrink-0
+      app-header
+      bio-data
+    footer.mt-auto.py-3.bg-white.text-center
+      .container
+        .row
+          .col
+            .text-muted Made by <a href="https://alrico.es" target="_blank">Alberto Rico</a>. Source code available at
+              a.ml-2(href="https://github.com/alrico88/biorhythm-explorer", target="_blank")
+                i.fab.fa-github
+                |  Github
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld.vue";
+import Header from "./components/Header.vue";
+import BioData from "./components/Data.vue";
 
 export default {
   name: "App",
   components: {
-    HelloWorld
+    AppHeader: Header,
+    BioData
   }
 };
 </script>
 
 <style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;800&display=swap");
+
+body {
+  font-family: "Nunito", Helvetica, Arial, sans-serif;
+  background-color: #d4d8f0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  color: #232946;
+  font-weight: 800;
+}
+
+p {
+  color: #121629;
+}
+
+table {
+  background-color: white;
+}
+
+.bg-purple {
+  background-color: white;
+}
+
+.card {
+  border-radius: 3px;
+}
+
+.card-body {
+  background-color: #fffffe;
 }
 </style>
