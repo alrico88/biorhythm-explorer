@@ -16,12 +16,19 @@
 <script>
 import Header from "./components/Header.vue";
 import BioData from "./components/Data.vue";
+import { mapActions } from "vuex";
 
 export default {
   name: "App",
   components: {
     AppHeader: Header,
     BioData
+  },
+  methods: {
+    ...mapActions(["startUp"])
+  },
+  mounted() {
+    this.startUp();
   }
 };
 </script>

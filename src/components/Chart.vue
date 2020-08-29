@@ -10,6 +10,12 @@
 import { mapGetters } from "vuex";
 import { format } from "date-fns";
 
+/**
+ * Gets highcharts compatible serie
+ * @param {string} name
+ * @param {object[]} array
+ * @param {string} prop
+ */
 function getSerie(name, array, prop) {
   return {
     name,

@@ -7,6 +7,11 @@ import {
   constants,
   calculateBiorhythm
 } from "biorhythm-calculator";
+import VuexPersistence from "vuex-persist";
+
+const vuexLocal = new VuexPersistence({
+  storage: window.localStorage
+});
 
 const { BIORHYTHMS } = constants;
 
@@ -69,7 +74,10 @@ export default new Vuex.Store({
   actions: {
     setToToday(context) {
       context.commit("changeDTA", format(today, DATE_FORMAT));
+    },
+    startUp(context) {
+      context.dispatch("setToToday");
     }
   },
-  modules: {}
+  plugins: [vuexLocal.plugin]
 });

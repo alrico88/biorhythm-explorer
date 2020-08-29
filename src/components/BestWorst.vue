@@ -9,19 +9,28 @@
       tr
         td Physical
         td {{ values.physical | fullDate }}
-        td {{ getRemaining(values.physical) }} days
+        td {{ remainingPhysical }}
       tr
         td Emotional
         td {{ values.emotional | fullDate }}
-        td {{ getRemaining(values.emotional) }} days
+        td {{ remainingEmotional }}
       tr
         td Intellectual
         td {{ values.intellectual | fullDate }}
-        td {{ getRemaining(values.intellectual) }} days
+        td {{ remainingIntellectual }}
 </template>
 
 <script>
 import { format, differenceInDays } from "date-fns";
+
+/**
+ * Gets nice text depending on remaining days
+ * @param {number} remaining
+ * @returns {string}
+ */
+function getRemainingText(remaining) {
+  return remaining > 0 ? `${remaining} days` : `${remaining} days (today)`;
+}
 
 export default {
   props: {
@@ -36,6 +45,20 @@ export default {
     },
     fullDate(date) {
       return format(date, "EEE dd MMMM yyyy");
+    }
+  },
+  computed: {
+    remainingPhysical() {
+      const remaining = this.getRemaining(this.values.physical);
+      return getRemainingText(remaining);
+    },
+    remainingEmotional() {
+      const remaining = this.getRemaining(this.values.emotional);
+      return getRemainingText(remaining);
+    },
+    remainingIntellectual() {
+      const remaining = this.getRemaining(this.values.intellectual);
+      return getRemainingText(remaining);
     }
   },
   methods: {
