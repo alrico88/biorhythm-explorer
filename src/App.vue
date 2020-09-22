@@ -69,4 +69,9 @@ table {
 .card-body {
   background-color: #fffffe;
 }
+
+.mx-datepicker {
+  width: 100% !important;
+  display: block;
+}
 </style>

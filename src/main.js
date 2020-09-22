@@ -2,6 +2,8 @@ import Vue from "vue";
 import App from "./App.vue";
 import store from "./store";
 
+import "vue2-datepicker/index.css";
+
 import VueHighcharts from "vue-highcharts";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import {

@@ -21,7 +21,7 @@
         .row
           .col
             .table-responsive
-              table.table.table-bordered.table-sm.mb-0
+              table.table.table-bordered.table-sm.mb-1
                 thead.thead-light
                   tr
                     th Date
@@ -29,13 +29,14 @@
                 tbody
                   tr
                     td Physical
-                    td.text-center(v-for="item of bioData", :style="getStyle(item.biorhythm.physical)") {{ item.biorhythm.physical }}
+                    td.text-center.text-monospace(v-for="item of bioData", :style="getStyle(item.biorhythm.physical)") {{ item.biorhythm.physical }}
                   tr
                     td Emotional
-                    td.text-center(v-for="item of bioData", :style="getStyle(item.biorhythm.emotional)") {{ item.biorhythm.emotional }}
+                    td.text-center.text-monospace(v-for="item of bioData", :style="getStyle(item.biorhythm.emotional)") {{ item.biorhythm.emotional }}
                   tr
                     td Intellectual
-                    td.text-center(v-for="item of bioData", :style="getStyle(item.biorhythm.intellectual)") {{ item.biorhythm.intellectual }}
+                    td.text-center.text-monospace(v-for="item of bioData", :style="getStyle(item.biorhythm.intellectual)") {{ item.biorhythm.intellectual }}
+              small.mb-0 Ranges go from -1 (worst) to 1 (best)
     .row.pb-3
       .col
         .row
@@ -96,6 +97,12 @@ export default {
 table {
   th {
     min-width: 100px;
+  }
+
+  tr {
+    .text-monospace {
+      border-color: transparent;
+    }
   }
 }
 </style>

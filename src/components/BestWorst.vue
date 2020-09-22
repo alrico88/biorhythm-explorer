@@ -1,5 +1,5 @@
 <template lang="pug">
-  table.table.table-sm.table-bordered
+  table.table.table-sm.table-striped
     thead.thead-light
       tr
         th Aspect
@@ -21,7 +21,7 @@
 </template>
 
 <script>
-import { format, differenceInDays } from "date-fns";
+import { format, differenceInCalendarDays } from "date-fns";
 
 /**
  * Gets nice text depending on remaining days
@@ -63,7 +63,7 @@ export default {
   },
   methods: {
     getRemaining(date) {
-      return differenceInDays(date, new Date());
+      return differenceInCalendarDays(date, new Date());
     }
   }
 };
