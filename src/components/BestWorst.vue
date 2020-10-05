@@ -1,23 +1,25 @@
 <template lang="pug">
-  table.table.table-sm.table-striped
-    thead.thead-light
-      tr
-        th Aspect
-        th Day
-        th Remaining
-    tbody
-      tr
-        td Physical
-        td {{ values.physical | fullDate }}
-        td {{ remainingPhysical }}
-      tr
-        td Emotional
-        td {{ values.emotional | fullDate }}
-        td {{ remainingEmotional }}
-      tr
-        td Intellectual
-        td {{ values.intellectual | fullDate }}
-        td {{ remainingIntellectual }}
+  .card.shadow-sm
+    .card-body.p-0
+      table.table.table-sm.table-striped.mb-0
+        thead.thead-light
+          tr
+            th Aspect
+            th Day
+            th Remaining
+        tbody
+          tr
+            td Physical
+            td {{ values.physical | fullDate }}
+            td {{ remainingPhysical }}
+          tr
+            td Emotional
+            td {{ values.emotional | fullDate }}
+            td {{ remainingEmotional }}
+          tr
+            td Intellectual
+            td {{ values.intellectual | fullDate }}
+            td {{ remainingIntellectual }}
 </template>
 
 <script>

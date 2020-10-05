@@ -1,16 +1,20 @@
 <template lang="pug">
-  #app.d-flex.flex-column.vh-100
-    main.flex-shrink-0
-      app-header
-      bio-data
-    footer.mt-auto.py-3.bg-white.text-center
-      .container
-        .row
-          .col
-            .text-muted Made by <a href="https://alrico.es" target="_blank">Alberto Rico</a>. Source code available at
-              a.ml-2(href="https://github.com/alrico88/biorhythm-explorer", target="_blank")
-                i.fab.fa-github
-                |  Github
+#app.d-flex.flex-column.vh-100
+  main.flex-shrink-0
+    app-header
+    bio-data
+  footer.mt-auto.py-3.bg-white.text-center
+    .container
+      .row
+        .col
+          .text-muted Made by <a href="https://alrico.es" target="_blank">Alberto Rico</a>. Source code available at
+            a.ml-2(
+              href="https://github.com/alrico88/biorhythm-explorer",
+              target="_blank"
+            )
+              i.fab.fa-github
+              |
+              | Github
 </template>
 
 <script>
@@ -38,7 +42,7 @@ export default {
 
 body {
   font-family: "Nunito", Helvetica, Arial, sans-serif;
-  background-color: #d4d8f0;
+  background-color: #b3dbdf;
 }
 
 h1,
@@ -46,7 +50,7 @@ h2,
 h3,
 h4,
 h5 {
-  color: #232946;
+  color: #072050;
   font-weight: 800;
 }
 

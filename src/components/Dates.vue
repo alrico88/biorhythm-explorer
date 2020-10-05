@@ -48,8 +48,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-$intense: #1f1135;
-$bg: #d4d8f0;
+$intense: #072050;
+$bg: #b3dbdf;
 
 .form-border {
   border: 2px solid $intense;

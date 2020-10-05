@@ -20,23 +20,25 @@
         chart.mb-3
         .row
           .col
-            .table-responsive
-              table.table.table-bordered.table-sm.mb-1
-                thead.thead-light
-                  tr
-                    th Date
-                    th.text-center(v-for="item of bioData", :class="getClass(item.day)") {{ item.day | niceDate }}
-                tbody
-                  tr
-                    td Physical
-                    td.text-center.text-monospace(v-for="item of bioData", :style="getStyle(item.biorhythm.physical)") {{ item.biorhythm.physical }}
-                  tr
-                    td Emotional
-                    td.text-center.text-monospace(v-for="item of bioData", :style="getStyle(item.biorhythm.emotional)") {{ item.biorhythm.emotional }}
-                  tr
-                    td Intellectual
-                    td.text-center.text-monospace(v-for="item of bioData", :style="getStyle(item.biorhythm.intellectual)") {{ item.biorhythm.intellectual }}
-              small.mb-0 Ranges go from -1 (worst) to 1 (best)
+            .card.shadow-sm
+              .card-body.p-0
+                .table-responsive
+                  table.table.table-bordered.table-sm.mb-1
+                    thead.thead-light
+                      tr
+                        th Date
+                        th.text-center(v-for="item of bioData", :class="getClass(item.day)") {{ item.day | niceDate }}
+                    tbody
+                      tr
+                        td Physical
+                        td.text-center.text-monospace(v-for="item of bioData", :style="getStyle(item.biorhythm.physical)") {{ item.biorhythm.physical }}
+                      tr
+                        td Emotional
+                        td.text-center.text-monospace(v-for="item of bioData", :style="getStyle(item.biorhythm.emotional)") {{ item.biorhythm.emotional }}
+                      tr
+                        td Intellectual
+                        td.text-center.text-monospace(v-for="item of bioData", :style="getStyle(item.biorhythm.intellectual)") {{ item.biorhythm.intellectual }}
+                  p.small.mb-0.pl-2.pb-1 Ranges go from -1 (worst) to 1 (best)
     .row.pb-3
       .col
         .row

@@ -1,8 +1,8 @@
 <template lang="pug">
   .row
     .col
-      .card
-        .card-body.shadow-sm
+      .card.shadow-sm
+        .card-body
           Highcharts(:options="chartOptions")
 </template>
 

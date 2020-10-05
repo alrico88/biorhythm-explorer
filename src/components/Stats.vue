@@ -1,6 +1,6 @@
 <template lang="pug">
-  .card
-    .card-body.bg-purple
+  .card.shadow-sm.statsCard(:style="cardStyle")
+    .card-body
       h5.card-title.mb-1
         fa-icon(:icon="icon", :style="style")
         |  {{ title }}
@@ -36,6 +36,11 @@ export default {
       return {
         color: this.dataColor
       };
+    },
+    cardStyle() {
+      return {
+        "border-left-color": this.dataColor
+      };
     }
   },
   filters: {
@@ -49,5 +54,10 @@ export default {
 <style lang="scss" scoped>
 p {
   font-size: 1.3rem;
+}
+
+.statsCard {
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
 }
 </style>
