@@ -1,8 +1,9 @@
 <template lang="pug">
   .card.shadow-sm.statsCard(:style="cardStyle")
-    .card-body
+    .card-body.p-3
       h5.card-title.mb-1
-        fa-icon(:icon="icon", :style="style")
+        span(:style="style")
+          slot(name="icon")
         |  {{ title }}
       p.mb-0 {{ value | scaled }}%
 </template>

@@ -7,11 +7,17 @@
             h4.mb-2 Your stats
         .row.row-cols-1.row-cols-md-3.justify-content-center
           .col.mb-1.mb-md-0
-            stats(title="Physical", :value="selectedData.physical", icon="dumbbell")
+            stats(title="Physical", :value="selectedData.physical")
+              template(#icon)
+                b-icon-person-check-fill
           .col.mb-1.mb-md-0
-            stats(title="Emotional", :value="selectedData.emotional", icon="heart-broken")
+            stats(title="Emotional", :value="selectedData.emotional")
+              template(#icon)
+                b-icon-heart-fill
           .col.mb-1.mb-md-0
-            stats(title="Intellectual", :value="selectedData.intellectual", icon="brain")
+            stats(title="Intellectual", :value="selectedData.intellectual")
+              template(#icon)
+                b-icon-award-fill
     .row.pb-3
       .col
         .row
@@ -22,7 +28,7 @@
           .col
             .card.shadow-sm
               .card-body.p-0
-                .table-responsive
+                .table-responsive.mb-0
                   table.table.table-bordered.table-sm.mb-1
                     thead.thead-light
                       tr
@@ -62,6 +68,11 @@ import Color from "color";
 import BestWorst from "./BestWorst.vue";
 import Chart from "./Chart.vue";
 import Stats from "./Stats.vue";
+import {
+  BIconHeartFill,
+  BIconPersonCheckFill,
+  BIconAwardFill
+} from "bootstrap-vue";
 
 const scale = createLinearScale([-1, 0, 1], ["red", "yellow", "green"]);
 
@@ -69,7 +80,10 @@ export default {
   components: {
     BestWorst,
     Chart,
-    Stats
+    Stats,
+    BIconPersonCheckFill,
+    BIconHeartFill,
+    BIconAwardFill
   },
   filters: {
     niceDate(date) {
@@ -88,7 +102,7 @@ export default {
     },
     getStyle(value) {
       return {
-        backgroundColor: Color(scale(value)).fade(0.5)
+        backgroundColor: Color(scale(value)).fade(0.7)
       };
     }
   }

@@ -54,9 +54,9 @@ $bg: #b3dbdf;
 .form-border {
   border: 2px solid $intense;
   border-radius: 5px;
-  padding: 5px 10px;
+  padding: 10px;
   .content {
-    margin-top: -18px;
+    margin-top: -23px;
     label {
       padding-left: 6px;
       padding-right: 6px;

@@ -1,0 +1,35 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;800&display=swap");
+
+$body-bg: #b3dbdf;
+$font-family-base: "Nunito", Helvetica, Arial, sans-serif;
+$card-border-radius: 3px;
+$card-bg: #fffffe;
+
+@import 'node_modules/bootstrap/scss/bootstrap.scss';
+@import 'node_modules/bootstrap-vue/src/index.scss';
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  color: #072050;
+  font-weight: 800;
+}
+
+p {
+  color: #121629;
+}
+
+table {
+  background-color: white;
+}
+
+.bg-purple {
+  background-color: white;
+}
+
+.mx-datepicker {
+  width: 100% !important;
+  display: block;
+}

@@ -1,6 +1,6 @@
 <template lang="pug">
   .container-fluid.pt-2
-    .row.mb-2
+    .row.mb-3
       .col
         h1.mb-0 Biorhythm calculator
     dates

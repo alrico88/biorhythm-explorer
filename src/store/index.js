@@ -72,11 +72,11 @@ export default new Vuex.Store({
     }
   },
   actions: {
-    setToToday(context) {
-      context.commit("changeDTA", format(today, DATE_FORMAT));
+    setToToday({ commit }) {
+      commit("changeDTA", format(today, DATE_FORMAT));
     },
-    startUp(context) {
-      context.dispatch("setToToday");
+    startUp({ dispatch }) {
+      dispatch("setToToday");
     }
   },
   plugins: [vuexLocal.plugin]
