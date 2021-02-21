@@ -15,6 +15,7 @@
     "core-js": "^3.6.5",
     "date-fns": "^2.15.0",
     "highcharts": "^8.1.2",
+    "math-helper-functions": "^1.7.1",
     "number-helper-functions": "^2.1.0",
     "scale-helper-functions": "^1.0.2",
     "vue": "^2.6.11",

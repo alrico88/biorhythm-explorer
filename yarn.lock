@@ -5892,6 +5892,14 @@ math-helper-functions@^1.2.0:
     lodash "^4.17.15"
     number-helper-functions "^1.0.0"
 
+math-helper-functions@^1.7.1:
+  version "1.7.1"
+  resolved "https://registry.yarnpkg.com/math-helper-functions/-/math-helper-functions-1.7.1.tgz#829b947d7d6e9a518bf359d69486f709010de046"
+  integrity sha512-QRdTxxoh7hDqf917jOMKkz9U1hZnrX/xRImRcxQ1MFenLV24G7Ecp/pjJIBzdZEaogEeBG8VbW+8Q9T4a3OMtw==
+  dependencies:
+    d3-array "^2.0.3"
+    lodash "^4.17.15"
+
 md5.js@^1.3.4:
   version "1.3.5"
   resolved "https://registry.yarnpkg.com/md5.js/-/md5.js-1.3.5.tgz#b5d07b8e3216e3e27cd728d72f70d1e6a342005f"

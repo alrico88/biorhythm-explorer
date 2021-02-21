@@ -11,22 +11,21 @@
             a.ml-2(
               href="https://github.com/alrico88/biorhythm-explorer",
               target="_blank"
-            )
-              i.fab.fa-github
-              |
-              | Github
+            ) #[b-icon-github] Github
 </template>
 
 <script>
 import Header from "./components/Header.vue";
 import BioData from "./components/Data.vue";
 import { mapActions } from "vuex";
+import { BIconGithub } from "bootstrap-vue";
 
 export default {
   name: "App",
   components: {
     AppHeader: Header,
-    BioData
+    BioData,
+    BIconGithub
   },
   methods: {
     ...mapActions(["startUp"])

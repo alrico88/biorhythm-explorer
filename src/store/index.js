@@ -1,6 +1,6 @@
 import Vue from "vue";
 import Vuex from "vuex";
-import { subYears, format } from "date-fns";
+import { subYears, format, addDays } from "date-fns";
 import {
   calculateBiorhythmRange,
   DayFinder,
@@ -8,6 +8,7 @@ import {
   calculateBiorhythm
 } from "biorhythm-calculator";
 import VuexPersistence from "vuex-persist";
+import { calcMean } from "math-helper-functions";
 
 const vuexLocal = new VuexPersistence({
   storage: window.localStorage
@@ -31,6 +32,23 @@ export default new Vuex.Store({
         new Date(state.dateOfBirth),
         new Date(state.dateToAnalyze)
       );
+    },
+    selectedDataAverage(_, getters) {
+      return calcMean(Object.values(getters.selectedData));
+    },
+    selectedDataTrend(state, getters) {
+      const prevAverage = getters.selectedDataAverage;
+
+      const nextAverage = calcMean(
+        Object.values(
+          calculateBiorhythm(
+            new Date(state.dateOfBirth),
+            addDays(new Date(state.dateToAnalyze), 1)
+          )
+        )
+      );
+
+      return prevAverage < nextAverage ? "up" : "down";
     },
     bioData(state) {
       return calculateBiorhythmRange(

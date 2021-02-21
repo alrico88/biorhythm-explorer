@@ -1,5 +1,5 @@
 <template lang="pug">
-  .card.shadow-sm
+  .card
     .card-body.p-0
       table.table.table-sm.table-striped.mb-0
         thead.thead-light
