@@ -7,10 +7,11 @@
     .container
       .row
         .col
-          .text-muted Made by <a href="https://alrico.es" target="_blank">Alberto Rico</a>. Source code available at
+          .text-muted Made by #[a(href="https://alrico.es" target="_blank" rel="noopener") Alberto Rico]. Source code available at
             a.ml-2(
               href="https://github.com/alrico88/biorhythm-explorer",
-              target="_blank"
+              target="_blank",
+              rel="noopener"
             ) #[b-icon-github] Github
 </template>
 
